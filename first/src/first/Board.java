@@ -39,24 +39,24 @@ public class Board {
                 bt.setLayout(new BorderLayout());
 
                 if (i == 0 || i == 7 || i == 1 || i == 6) {
-                    if (i == 0 || i == 7) { // Rook, Knight, Bishop, King, Queen
-                        if (j == 0 || j == 7) { // Castle/Rook
+                    if (i == 0 || i == 7) {
+                        if (j == 0 || j == 7) {
                             Castle ct = new Castle();
                             img = (i == 0) ? ct.WCastle() : ct.BCastle();
-                        } else if (j == 2 || j == 6) { // Knight
+                        } else if (j == 2 || j == 6) { 
                             Knight kn = new Knight();
                             img = (i == 0) ? kn.WKnight() : kn.BKnight();
-                        } else if (j == 1 || j == 5) { // Bishop
+                        } else if (j == 1 || j == 5) {
                             Bishop bs = new Bishop();
                             img = (i == 0) ? bs.WBishop() : bs.BBishop();
-                        } else if (j == 4) { // King
+                        } else if (j == 4) {
                             King ki = new King();
                             img = (i == 0) ? ki.WKing() : ki.BKing();
-                        } else if (j == 3) { // Queen
+                        } else if (j == 3) { 
                             Queen qu = new Queen();
                             img = (i == 0) ? qu.WQueen() : qu.BQueen();
                         }
-                    } else if (i == 1 || i == 6) { // Pawns
+                    } else if (i == 1 || i == 6) { 
                         Soldier so = new Soldier();
                         img = (i == 1) ? so.WSoldier() : so.BSoldier();
                     }
